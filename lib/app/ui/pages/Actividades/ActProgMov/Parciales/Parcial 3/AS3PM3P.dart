@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:atel_redes_telecom_prot/app/ui/globalwidgets/pdfapi.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
@@ -23,9 +22,9 @@ class _AS3PM3PState extends State<AS3PM3P> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Aplicaciónes móviles P3 - S3'),
         ),
@@ -39,25 +38,14 @@ class _AS3PM3PState extends State<AS3PM3P> {
                 itemBuilder: (context, index) {
                   final file = files[index];
                   return ListTile(
-                    leading: Text(
+                    title: Text(
+                      textWidthBasis: TextWidthBasis.parent,
                       file.name,
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    title: IconButton(
-                      color: Colors.white,
-                      icon: const Icon(Icons.computer),
-                      onPressed: () => downloadFiles(file),
                     ),
                     trailing: IconButton(
-                      color: Colors.white,
-                      icon: const Icon(Icons.phone_android),
-                      onPressed: () async {
-                        final path = dir;
-                        final url = file.name;
-                        final archv = await PDFApi.loadFirebase(url, path);
-                        if (archv == null) return;
-                        openPDF(context, archv);
-                      },
+                      color: Colors.black,
+                      icon: const Icon(Icons.download),
+                      onPressed: () => downloadFiles(file),
                     ),
                   );
                 },
@@ -75,9 +63,6 @@ class _AS3PM3PState extends State<AS3PM3P> {
         ),
       );
 
-  void openPDF(BuildContext context, File file) => Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => PDfViewPage(archv: file)),
-      );
   Future downloadFiles(Reference ref) async {
     final url = await ref.getDownloadURL();
     final name = ref.name;

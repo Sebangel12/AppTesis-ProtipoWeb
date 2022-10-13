@@ -1,7 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActProgVis/Parciales/Parcial%201/MActSemPV1P.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActProgVis/Parciales/Parcial%202/MActSemPV2P.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActProgVis/Parciales/Parcial%203/MActSemPV3P.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
@@ -15,9 +12,9 @@ class InfCursoProgVis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Prototipo Aplicación Movil y Web'),
         ),
@@ -41,9 +38,9 @@ class InfCursoProgVis extends StatelessWidget {
                         style: TextButton.styleFrom(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.only(right: 50, left: 50),
-                            primary: (const Color(0xFFCDBE78)),
+                            primary: (const Color(0xFFFFFFFF)),
                             textStyle: const TextStyle(fontSize: 25),
-                            backgroundColor: const Color(0xFF383838)),
+                            backgroundColor: Colors.black),
                         onPressed: () {},
                         child: const Text("Información Programación Visual"),
                       ),
@@ -62,17 +59,17 @@ class InfCursoProgVis extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Aplicaciones a usar")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
+                          width: double.maxFinite,
                           height: 40,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,18 +95,18 @@ class InfCursoProgVis extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Materiales requeridos")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
-                          height: 260,
+                          width: double.maxFinite,
+                          height: 190,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -153,18 +150,18 @@ class InfCursoProgVis extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Descripción de la materia")),
                     ),
 
                     const Card(
-                      color: Color(0xFFCDBE78),
+                      color: (const Color(0xFF388E3C)),
                       child: SizedBox(
-                        width: 380,
-                        height: 290,
+                        width: double.maxFinite,
+                        height: 200,
                         child: (Text(
                           "Comprendera la importancia de una interfaz de usuario en el desarrollo de un programa, asi como su diseño de colores, tamaño de los campos,"
                           " tipos de letras, en sí todas las características que hagan al usuario final una agradable experiencia al momento de usar nuestro programa."
@@ -180,20 +177,18 @@ class InfCursoProgVis extends StatelessWidget {
                     Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const SizedBox(
                               //height: 20,
                               width: 15,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemPVparcial1())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU1PPV),
                               child: const Text(
                                 'Primer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -204,14 +199,11 @@ class InfCursoProgVis extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemPVparcial2())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU2PPV),
                               child: const Text(
                                 'Segundo Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -222,14 +214,11 @@ class InfCursoProgVis extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemPVparcial3())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU3PPV),
                               child: const Text(
                                 'Tercer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -249,14 +238,9 @@ class InfCursoProgVis extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Color(0xFFcdbe78),
-            child: const Icon(Icons.keyboard_return),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => const MenuDocente()),
-              );
-            }));
+          backgroundColor: Color(0xFFEB1D36),
+          child: const Icon(Icons.keyboard_return),
+          onPressed: () => router.pushNamedAndRemoveUntil(Routes.HOME),
+        ));
   }
 }

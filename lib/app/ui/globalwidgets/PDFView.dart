@@ -18,21 +18,23 @@ class _PDFViewState extends State<PDFView> {
     final name = widget.name;
     //print(dir);
     return Scaffold(
-      backgroundColor: const Color(0xFF066163),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF383838),
+        backgroundColor: const Color(0xFF388E3C),
         title: const Text('Habra el documento PDF'),
         centerTitle: true,
       ),
-      body: CupertinoButton(
-        child: Text(
-          name,
-          style: const TextStyle(color: Colors.white),
+      body: Center(
+        child: CupertinoButton(
+          color: Colors.black,
+          child: Text(
+            name,
+          ),
+          onPressed: () {
+            // ignore: deprecated_member_use
+            launch(widget.url);
+          },
         ),
-        onPressed: () {
-          // ignore: deprecated_member_use
-          launch(widget.url);
-        },
       ),
     );
   }

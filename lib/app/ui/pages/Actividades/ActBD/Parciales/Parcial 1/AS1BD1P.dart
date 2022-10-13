@@ -1,13 +1,7 @@
 import 'dart:io';
 import 'package:atel_redes_telecom_prot/app/ui/globalwidgets/PDFView.dart';
-import 'package:atel_redes_telecom_prot/app/ui/globalwidgets/pdfapi.dart';
-import 'package:dio/dio.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../globalwidgets/pdfviewpage.dart';
 
@@ -28,9 +22,9 @@ class _AS1BD1PState extends State<AS1BD1P> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Base de datos P1 - S1'),
         ),
@@ -44,25 +38,14 @@ class _AS1BD1PState extends State<AS1BD1P> {
                 itemBuilder: (context, index) {
                   final file = files[index];
                   return ListTile(
-                    leading: Text(
+                    title: Text(
+                      textWidthBasis: TextWidthBasis.parent,
                       file.name,
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    title: IconButton(
-                      color: Colors.white,
-                      icon: const Icon(Icons.computer),
-                      onPressed: () => downloadFiles(file),
                     ),
                     trailing: IconButton(
-                      color: Colors.white,
-                      icon: const Icon(Icons.phone_android),
-                      onPressed: () async {
-                        final path = dir;
-                        final url = file.name;
-                        final archv = await PDFApi.loadFirebase(url, path);
-                        if (archv == null) return;
-                        openPDF(context, archv);
-                      },
+                      color: Colors.black,
+                      icon: const Icon(Icons.download),
+                      onPressed: () => downloadFiles(file),
                     ),
                   );
                 },
@@ -80,9 +63,6 @@ class _AS1BD1PState extends State<AS1BD1P> {
         ),
       );
 
-  void openPDF(BuildContext context, File file) => Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => PDfViewPage(archv: file)),
-      );
   Future downloadFiles(Reference ref) async {
     final url = await ref.getDownloadURL();
     final name = ref.name;

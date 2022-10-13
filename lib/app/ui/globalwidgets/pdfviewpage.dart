@@ -20,6 +20,7 @@ class _PDfViewPageState extends State<PDfViewPage> {
     final name = basename(widget.archv.path);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color(0xFF388E3C),
         title: Text(name),
       ),
       body: PDFView(

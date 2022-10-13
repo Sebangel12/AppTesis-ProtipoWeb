@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActBD/Parciales/Parcial%201/AS1BD1P.dart';
 import 'package:atel_redes_telecom_prot/app/ui/pages/ControlAct/ActBD/Parciales/MenuParBD.dart';
+import 'package:atel_redes_telecom_prot/app/ui/pages/ControlAct/ActFunProg/Parciales/MenuParFP.dart';
 import 'package:atel_redes_telecom_prot/app/ui/pages/ControlAct/ActProgMov/Parciales/MenuParAM.dart';
 import 'package:atel_redes_telecom_prot/app/ui/pages/ControlAct/ActProgVis/Parciales/MenuParPV.dart';
 import 'package:flutter/cupertino.dart';
@@ -132,7 +133,7 @@ class _codigoState extends State<codigo> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => MenParPV(),
+                                          builder: (context) => MenParFP(),
                                         ));
                                   } else {
                                     showDialog(

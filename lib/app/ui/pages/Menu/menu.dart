@@ -12,9 +12,9 @@ class MenuDocente extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF066163),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF383838),
+        backgroundColor: const Color(0xFF388E3C),
         centerTitle: true,
         title: const Text('Prototipo Aplicación Movil y Web'),
       ),
@@ -29,9 +29,9 @@ class MenuDocente extends StatelessWidget {
                   children: [
                     TextButton(
                         style: TextButton.styleFrom(
-                            primary: (const Color(0xFFCDBE78)),
+                            primary: (const Color(0xFFFFFFFF)),
                             textStyle: const TextStyle(fontSize: 25),
-                            backgroundColor: const Color(0xFF383838)),
+                            backgroundColor: Colors.black),
                         onPressed: () {},
                         child: const Text("MENÚ")),
                     const SizedBox(
@@ -39,7 +39,7 @@ class MenuDocente extends StatelessWidget {
                       width: 20,
                     ),
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.only(right: 50, left: 50),
                       //textColor: Colors.black,
                       onPressed: () {
@@ -47,14 +47,13 @@ class MenuDocente extends StatelessWidget {
                       },
                       child: const Text(
                         'Fundamentos de Programación',
-                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.only(right: 80, left: 80),
                       //textColor: Colors.black,
                       onPressed: () {
@@ -62,14 +61,13 @@ class MenuDocente extends StatelessWidget {
                       },
                       child: const Text(
                         'Programación Visual',
-                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.only(right: 80, left: 80),
                       //textColor: Colors.black,
                       onPressed: () {
@@ -77,14 +75,13 @@ class MenuDocente extends StatelessWidget {
                       },
                       child: const Text(
                         'Bases de datos',
-                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.only(right: 100, left: 100),
                       //textColor: Colors.black,
                       onPressed: () {
@@ -92,17 +89,15 @@ class MenuDocente extends StatelessWidget {
                       },
                       child: const Text(
                         'Aplicaciónes Móviles',
-                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                     const SizedBox(
                       height: 175,
                     ),
                     CupertinoButton(
-                        color: const Color(0xFFF2F2F2),
+                        color: (Color(0xFFEB1D36)),
                         child: const Text(
                           "Cerrar sesión",
-                          style: TextStyle(color: Colors.black),
                         ),
                         onPressed: () async {
                           await Get.find<authrepor>().SingOut();

@@ -14,9 +14,9 @@ class InfCursoFunProg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Prototipo Aplicación Movil y Web'),
         ),
@@ -40,9 +40,9 @@ class InfCursoFunProg extends StatelessWidget {
                         style: TextButton.styleFrom(
                             alignment: Alignment.center,
                             // padding: const EdgeInsets.only(right: 50, left: 50),
-                            primary: (const Color(0xFFCDBE78)),
-                            textStyle: const TextStyle(fontSize: 23),
-                            backgroundColor: const Color(0xFF383838)),
+                            primary: (const Color(0xFFFFFFFF)),
+                            textStyle: const TextStyle(fontSize: 25),
+                            backgroundColor: Colors.black),
                         onPressed: () {},
                         child: const Text(
                             "Información Fundamentos de Programación"),
@@ -61,17 +61,17 @@ class InfCursoFunProg extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Aplicaciones a usar")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
+                          width: double.maxFinite,
                           height: 60,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,18 +102,18 @@ class InfCursoFunProg extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Materiales requeridos")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
-                          height: 260,
+                          width: double.maxFinite,
+                          height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -157,9 +157,9 @@ class InfCursoFunProg extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Descripción de la materia")),
                     ),
@@ -168,10 +168,10 @@ class InfCursoFunProg extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       children: const [
                         Card(
-                          color: Color(0xFFCDBE78),
+                          color: (const Color(0xFF388E3C)),
                           child: SizedBox(
-                            width: 400,
-                            height: 300,
+                            width: double.maxFinite,
+                            height: 200,
                             child: (Text(
                               "Se llevaran a cabo la logica de una programación, sus pasos a seguir, los errores que pueden ocurrir"
                               " sentencias que validan un ingreso de datos o una accion. Con esta materia desarrollará el razonamiento que permite la creación y/o desarrollo de un programa.",
@@ -189,20 +189,18 @@ class InfCursoFunProg extends StatelessWidget {
                     Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const SizedBox(
                               //height: 20,
                               width: 15,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemFPparcial1())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU1PFP),
                               child: const Text(
                                 'Primer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -213,14 +211,11 @@ class InfCursoFunProg extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemFPparcial2())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU2PFP),
                               child: const Text(
                                 'Segundo Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -231,14 +226,11 @@ class InfCursoFunProg extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemFPparcial3())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU3PFP),
                               child: const Text(
                                 'Tercer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -258,14 +250,9 @@ class InfCursoFunProg extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Color(0xFFcdbe78),
-            child: const Icon(Icons.keyboard_return),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => const MenuDocente()),
-              );
-            }));
+          backgroundColor: Color(0xFFEB1D36),
+          child: const Icon(Icons.keyboard_return),
+          onPressed: () => router.pushNamedAndRemoveUntil(Routes.HOME),
+        ));
   }
 }

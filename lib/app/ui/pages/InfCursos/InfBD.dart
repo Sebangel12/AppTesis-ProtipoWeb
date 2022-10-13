@@ -1,14 +1,8 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActBD/Parciales/Parcial%201/MActSemBD1P.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActBD/Parciales/Parcial%202/MActSemBD2P.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActBD/Parciales/Parcial%203/MActSemBD3P.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Menu/MenuE.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Menu/menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import '../../routes/routes.dart';
-import '../Actividades/ActBD/Parciales/Parcial 1/AS1BD1P.dart';
 
 class InfCursoBD extends StatelessWidget {
   const InfCursoBD({Key? key}) : super(key: key);
@@ -16,9 +10,9 @@ class InfCursoBD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Prototipo Aplicación Movil y Web'),
         ),
@@ -42,9 +36,9 @@ class InfCursoBD extends StatelessWidget {
                         style: TextButton.styleFrom(
                             alignment: Alignment.center,
                             padding: const EdgeInsets.only(right: 50, left: 50),
-                            primary: (const Color(0xFFCDBE78)),
+                            primary: (const Color(0xFFFFFFFF)),
                             textStyle: const TextStyle(fontSize: 25),
-                            backgroundColor: const Color(0xFF383838)),
+                            backgroundColor: Colors.black),
                         onPressed: () {},
                         child: const Text("Información Bases de Datos"),
                       ),
@@ -64,17 +58,17 @@ class InfCursoBD extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Aplicaciones a usar")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
+                          width: double.maxFinite,
                           height: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,18 +109,18 @@ class InfCursoBD extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Materiales requeridos")),
                     ),
 
                     Card(
-                        color: const Color(0xFFCDBE78),
+                        color: (const Color(0xFF388E3C)),
                         child: SizedBox(
-                          width: 380,
-                          height: 285,
+                          width: double.maxFinite,
+                          height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -170,18 +164,18 @@ class InfCursoBD extends StatelessWidget {
                               alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.only(right: 50, left: 50),
-                              primary: (const Color(0xFFCDBE78)),
+                              primary: (const Color(0xFFFFFFFF)),
                               textStyle: const TextStyle(fontSize: 25),
-                              backgroundColor: const Color(0xFF383838)),
+                              backgroundColor: Colors.black),
                           onPressed: () {},
                           child: const Text("Descripción de la materia")),
                     ),
 
                     const Card(
-                      color: Color(0xFFCDBE78),
+                      color: (const Color(0xFF388E3C)),
                       child: SizedBox(
-                        width: 400,
-                        height: 280,
+                        width: double.maxFinite,
+                        height: 200,
                         child: (Text(
                           " La materia abarcará sobre el diseño físico, logico y conceptual de una base de datos, manejo de"
                           " bases de datos en forma de codigo y usando UI y los conceptos basicos a tener en cuenta al momento"
@@ -197,20 +191,18 @@ class InfCursoBD extends StatelessWidget {
                     Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const SizedBox(
                               //height: 20,
                               width: 15,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemBDparcial1())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU1PBD),
                               child: const Text(
                                 'Primer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -221,14 +213,11 @@ class InfCursoBD extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemBDparcial2())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU2PBD),
                               child: const Text(
                                 'Segundo Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -239,14 +228,11 @@ class InfCursoBD extends StatelessWidget {
                               width: 13,
                             ),
                             CupertinoButton(
-                              color: (const Color(0xFFCDBE78)),
+                              color: (Color(0xFFEB1D36)),
                               padding:
                                   const EdgeInsets.only(right: 15, left: 15),
-                              onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const MActsemBDparcial3())),
+                              onPressed: () =>
+                                  router.pushNamed(Routes.MENU3PBD),
                               child: const Text(
                                 'Tercer Parcial',
                                 style: TextStyle(color: Colors.black),
@@ -266,14 +252,8 @@ class InfCursoBD extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Color(0xFFcdbe78),
+            backgroundColor: Color(0xFFEB1D36),
             child: const Icon(Icons.keyboard_return),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => const MenuDocente()),
-              );
-            }));
+            onPressed: () => router.pushNamedAndRemoveUntil(Routes.HOME)));
   }
 }

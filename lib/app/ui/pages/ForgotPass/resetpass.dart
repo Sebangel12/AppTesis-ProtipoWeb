@@ -21,9 +21,9 @@ class ResetPass extends StatelessWidget {
     return ProviderListener<ResetPassControl>(
       provider: resetPaswordProvider,
       builder: (_, controller) => Scaffold(
-        backgroundColor: const Color(0xFF066163),
+        backgroundColor: const Color(0xFFFFFFFF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF383838),
+          backgroundColor: const Color(0xFF388E3C),
           centerTitle: true,
           title: const Text('Prototipo Aplicación Movil y Web'),
         ),
@@ -31,7 +31,7 @@ class ResetPass extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Card(
-                color: (const Color(0xFFCDBE78)),
+                color: (const Color(0xFF388E3C)),
                 margin: const EdgeInsets.only(
                     left: 20, right: 20, top: 50, bottom: 50),
                 child: Padding(
@@ -68,12 +68,11 @@ class ResetPass extends StatelessWidget {
               child: Column(
                 children: [
                   CupertinoButton(
-                    color: (const Color(0xFFCDBE78)),
+                    color: (Colors.black),
                     padding: const EdgeInsets.symmetric(horizontal: 108),
                     onPressed: () => _submit(context),
                     child: const Text(
                       "Enviar",
-                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ],

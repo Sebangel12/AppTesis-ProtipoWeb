@@ -1,18 +1,8 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:atel_redes_telecom_prot/app/ui/globalwidgets/inputfield.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/login/control/logincontrol.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/login/utils/sendloginform.dart';
-import 'package:atel_redes_telecom_prot/app/utils/emailvalidator.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:atel_redes_telecom_prot/app/ui/routes/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_meedu/meedu.dart';
 import 'package:flutter_meedu/ui.dart';
-import '../../routes/routes.dart';
-
-final LoginProvider1 = SimpleProvider(
-  (_) => LoginControl(),
-);
 
 class LoginAdmin extends StatefulWidget {
   const LoginAdmin({Key? key}) : super(key: key);
@@ -24,136 +14,137 @@ class LoginAdmin extends StatefulWidget {
 }
 
 class _LoginAdminState extends State<LoginAdmin> {
-  final _controler = LoginProvider1.read;
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-
-    super.dispose();
-  }
+  bool _showpass = false;
 
   @override
   Widget build(BuildContext context) {
-    return ProviderListener<LoginControl>(
-        provider: LoginProvider1,
-        builder: (_, controller1) {
-          return Scaffold(
-              backgroundColor: const Color(0xFF066163),
-              body: Center(
+    String mailAPP = 'doc.app@espe.edu.ec';
+    String mailcodBD = 'doc.bd@espe.edu.ec';
+    String mailcodFP = 'doc.fp@espe.edu.ec';
+    String mailcodPV = 'doc.pv@espe.edu.ec';
+    String mail = '';
+    String passBD = '7845';
+    String passAM = '1245';
+    String passPV = '8956';
+    String passFP = '5623';
+    String pass = '';
+
+    final _txtcontrol = TextEditingController();
+    final _passcontrol = TextEditingController();
+
+    return Scaffold(
+        backgroundColor: const Color(0xFFFFFFFF),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF388E3C),
+          centerTitle: true,
+          title: const Text('Prototipo Aplicación Movil y Web'),
+        ),
+        body: Center(
+          child: ListView(
+            children: <Widget>[
+              Center(
+                child: ElasticInLeft(
+                  duration: const Duration(seconds: 2),
                   child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                    ElasticInLeft(
-                      duration: const Duration(seconds: 2),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                                style: TextButton.styleFrom(
-                                    primary: (const Color(0xFFCDBE78)),
-                                    textStyle: const TextStyle(fontSize: 25),
-                                    backgroundColor: const Color(0xFF383838)),
-                                onPressed: () {},
-                                child: const Text(
-                                  "Ingrese la Credencial otorgada al administrador",
-                                  textAlign: TextAlign.center,
-                                )),
-                            const SizedBox(
-                              height: 20,
-                              width: 20,
-                            ),
-                            Center(
-                              child: Card(
-                                color: (const Color(0xffcdbe78)),
-                                margin: const EdgeInsets.only(
-                                    left: 20, right: 20, top: 20, bottom: 50),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 35, vertical: 20),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      ElasticInLeft(
-                                          duration: const Duration(seconds: 2),
-                                          child: Form(
-                                            key: _controler.formKey,
-                                            child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  InputField(
-                                                      onChanged: controller1
-                                                          .onEmailChange,
-                                                      inputType: TextInputType
-                                                          .emailAddress,
-                                                      validator: (text) {
-                                                        if (isValiEmail1(
-                                                            text!)) {
-                                                          return null;
-                                                        }
-                                                        return "Credencial incorrecta";
-                                                      },
-                                                      label:
-                                                          "Credencial del usuario",
-                                                      child: const Icon(
-                                                          Icons.email)),
-                                                  const SizedBox(
-                                                    height: 4,
-                                                  ),
-                                                  InputField(
-                                                      onChanged: controller1
-                                                          .onPassChange,
-                                                      ispass: true,
-                                                      validator: (text) {
-                                                        if (text!
-                                                                .trim()
-                                                                .length >=
-                                                            6) {
-                                                          return null;
-                                                        }
-                                                        return "Contraseña incorrecta";
-                                                      },
-                                                      label: "Contraseña",
-                                                      child: const Icon(
-                                                          Icons.key)),
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  CupertinoButton(
-                                                      color: Color(0xFF383838),
-                                                      child: Text('Ingresar'),
-                                                      onPressed: () =>
-                                                          sendLoginForm1(
-                                                              context)),
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                ]),
-                                          ))
-                                    ],
+                    children: [
+                      Container(
+                          padding: const EdgeInsets.only(
+                              left: 20, right: 20, top: 20, bottom: 0),
+                          child: const Image(
+                            image: AssetImage("assets/img/logo100ESpe.png"),
+                            height: 175,
+                            width: 350,
+                          )),
+                      Center(
+                        child: Card(
+                          color: (const Color(0xFF388E3C)),
+                          margin: const EdgeInsets.only(
+                              left: 20, right: 20, top: 20, bottom: 50),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35, vertical: 20),
+                            child: Column(
+                              children: [
+                                TextField(
+                                  controller: _txtcontrol,
+                                  decoration: const InputDecoration(
+                                    hintText: 'Usuario',
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.black)),
                                   ),
                                 ),
-                              ),
+                                const SizedBox(height: 10),
+                                TextFormField(
+                                  obscureText:
+                                      _showpass == false ? true : false,
+                                  controller: _passcontrol,
+                                  decoration: InputDecoration(
+                                      enabledBorder: const OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.black)),
+                                      hintText: 'Contraseña',
+                                      suffixIcon: GestureDetector(
+                                        child: Icon(_showpass == false
+                                            ? Icons.visibility_off
+                                            : Icons.visibility),
+                                        onTap: () {
+                                          setState(() {
+                                            _showpass = !_showpass;
+                                          });
+                                        },
+                                      )),
+                                ),
+                              ],
                             ),
-                          ]),
-                    )
-                  ])),
-              floatingActionButton: FloatingActionButton(
-                  backgroundColor: Color(0xFFcdbe78),
-                  child: const Icon(Icons.keyboard_return),
-                  onPressed: () =>
-                      router.pushNamedAndRemoveUntil(Routes.LOGIN)));
-        });
-  }
+                          ),
+                        ),
+                      ),
+                      CupertinoButton(
+                          color: (Colors.black),
+                          child: const Text('Ingresar'),
+                          onPressed: () {
+                            mail = _txtcontrol.text;
+                            pass = _passcontrol.text;
+                            if (mail == mailAPP && pass == passAM) {
+                              _txtcontrol.clear();
+                              _passcontrol.clear();
 
-  Future signIn() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: emailController.text.trim(),
-      password: passwordController.text.trim(),
-    );
+                              router.pushNamedAndRemoveUntil(
+                                  Routes.CONTRON_ACT_PROGAPP);
+                            } else if (mail == mailcodBD && pass == passBD) {
+                              _txtcontrol.clear();
+                              _passcontrol.clear();
+                              router.pushNamedAndRemoveUntil(
+                                  Routes.CONTRON_ACT_DATABASE);
+                            } else if (mail == mailcodFP && pass == passFP) {
+                              _txtcontrol.clear();
+                              _passcontrol.clear();
+                              router.pushNamedAndRemoveUntil(
+                                  Routes.CONTRON_ACT_FUNPROG);
+                            } else if (mail == mailcodPV && pass == passPV) {
+                              _txtcontrol.clear();
+                              _passcontrol.clear();
+                              router.pushNamedAndRemoveUntil(
+                                  Routes.CONTRON_ACT_PROGVIS);
+                            } else {
+                              showDialog(
+                                  context: context,
+                                  builder: ((_) => const AlertDialog(
+                                      title: Text(
+                                          'Correo o contraseña incorrecto'))));
+                            }
+                          })
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+            backgroundColor: const Color(0xFFEB1D36),
+            child: const Icon(Icons.keyboard_return),
+            onPressed: () => router.pushNamedAndRemoveUntil(Routes.LOGIN)));
   }
 }

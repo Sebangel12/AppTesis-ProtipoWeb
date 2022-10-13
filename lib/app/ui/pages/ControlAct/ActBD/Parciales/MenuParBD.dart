@@ -1,24 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_meedu/meedu.dart';
+import 'package:flutter_meedu/ui.dart';
 
-import 'Parcial1/S1BD1P.dart';
-import 'Parcial1/S2BD1P.dart';
-import 'Parcial1/S3BD1P.dart';
-import 'Parcial1/S4BD1P.dart';
-import 'Parcial1/S5BD1P.dart';
-import 'Parcial1/S6BD1P.dart';
-import 'Parcial2/S1BD2P.dart';
-import 'Parcial2/S2BD2P.dart';
-import 'Parcial2/S3BD2P.dart';
-import 'Parcial2/S4BD2P.dart';
-import 'Parcial2/S5BD2P.dart';
-import 'Parcial2/S6BD2P.dart';
-import 'Parcial3/S1BD3P.dart';
-import 'Parcial3/S2BD3P.dart';
-import 'Parcial3/S3BD3P.dart';
-import 'Parcial3/S4BD3P.dart';
-import 'Parcial3/S5BD3P.dart';
-import 'Parcial3/S6BD3P.dart';
+import '../../../../../domain/repositories/authrepos.dart';
+import '../../../../routes/routes.dart';
 
 class MenParBD extends StatefulWidget {
   @override
@@ -29,9 +15,9 @@ class _MenParBDState extends State<MenParBD> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF066163),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF383838),
+        backgroundColor: const Color(0xFF388E3C),
         centerTitle: true,
         title: const Text('Bases de Datos'),
       ),
@@ -41,11 +27,11 @@ class _MenParBDState extends State<MenParBD> {
             const SizedBox(height: 50),
             CupertinoButton(
                 padding: EdgeInsets.symmetric(horizontal: 120),
-                color: (const Color(0xFFCDBE78)),
+                color: Colors.black,
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                 child: Text('Primer Parcial'),
                 onPressed: () => showModalBottomSheet(
-                      backgroundColor: const Color(0xFF383838),
+                      backgroundColor: const Color(0xFF388E3C),
                       isScrollControlled: true,
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.vertical(
@@ -57,11 +43,11 @@ class _MenParBDState extends State<MenParBD> {
             const SizedBox(height: 20),
             CupertinoButton(
                 padding: EdgeInsets.symmetric(horizontal: 110),
-                color: (const Color(0xFFCDBE78)),
+                color: Colors.black,
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                 child: Text('Segundo Parcial'),
                 onPressed: () => showModalBottomSheet(
-                      backgroundColor: const Color(0xFF383838),
+                      backgroundColor: const Color(0xFF388E3C),
                       isScrollControlled: true,
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.vertical(
@@ -73,11 +59,11 @@ class _MenParBDState extends State<MenParBD> {
             const SizedBox(height: 20),
             CupertinoButton(
                 padding: EdgeInsets.symmetric(horizontal: 120),
-                color: (const Color(0xFFCDBE78)),
+                color: Colors.black,
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                 child: Text('Tercer Parcial'),
                 onPressed: () => showModalBottomSheet(
-                      backgroundColor: const Color(0xFF383838),
+                      backgroundColor: const Color(0xFF388E3C),
                       isScrollControlled: true,
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.vertical(
@@ -86,6 +72,16 @@ class _MenParBDState extends State<MenParBD> {
                       context: context,
                       builder: (context) => buildshett3(),
                     )),
+            const SizedBox(height: 50),
+            CupertinoButton(
+                color: (Color(0xFFEB1D36)),
+                child: const Text(
+                  "Cerrar sesión",
+                ),
+                onPressed: () async {
+                  await Get.find<authrepor>().SingOut();
+                  router.pushNamedAndRemoveUntil(Routes.LOGIN);
+                })
           ],
         ),
       ),
@@ -99,86 +95,62 @@ class _MenParBDState extends State<MenParBD> {
             height: 50,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 1',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S1BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S1P1BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 2',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S2BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S2P1BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 3',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S3BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S3P1BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 4',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S4BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S4P1BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 5',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S5BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S5P1BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 6',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S6BD1P()))),
+              onPressed: () => router.pushNamed(Routes.S6P1BD)),
           const SizedBox(height: 20),
         ],
       );
@@ -189,86 +161,62 @@ class _MenParBDState extends State<MenParBD> {
             height: 50,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 1',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S1BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S1P2BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 2',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S2BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S2P2BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 3',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S3BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S3P2BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 4',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S4BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S4P2BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 5',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S5BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S5P2BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 6',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S6BD2P()))),
+              onPressed: () => router.pushNamed(Routes.S6P2BD)),
           const SizedBox(height: 20),
         ],
       );
@@ -279,86 +227,62 @@ class _MenParBDState extends State<MenParBD> {
             height: 50,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 1',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S1BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S1P3BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 2',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S2BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S2P3BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 3',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S3BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S3P3BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 4',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S4BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S4P3BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 5',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S5BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S5P3BD)),
           const SizedBox(
             height: 20,
           ),
           CupertinoButton(
-              color: (const Color(0xFFCDBE78)),
+              color: Colors.black,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 6',
-                style: TextStyle(color: Colors.black),
               ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => S6BD3P()))),
+              onPressed: () => router.pushNamed(Routes.S6P3BD)),
           const SizedBox(height: 20),
         ],
       );

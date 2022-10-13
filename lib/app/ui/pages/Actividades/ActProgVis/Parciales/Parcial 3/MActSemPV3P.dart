@@ -1,16 +1,11 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:atel_redes_telecom_prot/app/ui/pages/Actividades/ActBD/Parciales/Parcial%201/AS1BD1P.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_meedu/ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../../data/urlsPV.dart';
-import 'AS1PV3P.dart';
-import 'AS2PV3P.dart';
-import 'AS3PV3P.dart';
-import 'AS4PV3P.dart';
-import 'AS5PV3P.dart';
-import 'AS6PV3P.dart';
+import '../../../../../routes/routes.dart';
 
 class MActsemPVparcial3 extends StatelessWidget {
   const MActsemPVparcial3({Key? key}) : super(key: key);
@@ -20,9 +15,9 @@ class MActsemPVparcial3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF066163),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF383838),
+        backgroundColor: const Color(0xFF388E3C),
         centerTitle: true,
         title: const Text('Programación Visual - P3'),
       ),
@@ -42,26 +37,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 1',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS1PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM1P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url1);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -73,26 +64,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 2',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS2PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM2P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url2);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -104,26 +91,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 3',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS3PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM3P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url3);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -135,26 +118,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 4',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS4PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM4P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url4);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -166,26 +145,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 5',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS5PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM5P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url5);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -197,26 +172,22 @@ class MActsemPVparcial3 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 6',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS6PV3P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM6P3PV)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFPVP3().url6);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],

@@ -2,8 +2,10 @@ import 'package:animate_do/animate_do.dart';
 import 'package:atel_redes_telecom_prot/app/data/urlsBD.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_meedu/ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../routes/routes.dart';
 import 'AS1BD2P.dart';
 import 'AS2BD2P.dart';
 import 'AS3BD2P.dart';
@@ -19,9 +21,9 @@ class MActsemBDparcial2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF066163),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF383838),
+        backgroundColor: const Color(0xFF388E3C),
         centerTitle: true,
         title: const Text('Bases de Datos - P2'),
       ),
@@ -41,26 +43,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 1',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS1BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM1P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url1);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -72,26 +70,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 2',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS2BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM2P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url2);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -103,26 +97,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 3',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS3BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM3P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url3);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -134,26 +124,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 4',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS4BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM4P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url4);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -165,26 +151,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 5',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS5BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM5P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url5);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],
@@ -196,26 +178,22 @@ class MActsemBDparcial2 extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CupertinoButton(
-                            color: (const Color(0xFFCDBE78)),
+                            color: (Colors.black),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             child: const Text(
                               'Semana 6',
-                              style: TextStyle(color: Colors.black),
                             ),
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AS6BD2P()))),
+                            onPressed: () => router.pushNamed(Routes.SEM6P2BD)),
+                        SizedBox(width: 10),
                         CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
                           onPressed: () {
                             // ignore: deprecated_member_use
                             launch(EFBDP2().url6);
                           },
                           child: const Text(
                             'Evaluación formativa',
-                            style: TextStyle(color: Colors.white),
                           ),
                         )
                       ],

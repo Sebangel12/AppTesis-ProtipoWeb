@@ -25,9 +25,9 @@ class LoginPage extends StatelessWidget {
       provider: LoginProvider,
       builder: (_, controller) {
         return Scaffold(
-          backgroundColor: const Color(0xFF066163),
+          backgroundColor: const Color(0xFFFFFFFF),
           appBar: AppBar(
-            backgroundColor: const Color(0xFF383838),
+            backgroundColor: const Color(0xFF388E3C),
             centerTitle: true,
             title: const Text('Prototipo Aplicación Movil y Web'),
           ),
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       left: 20, right: 20, top: 20, bottom: 0),
                   child: const Image(
-                    image: AssetImage("assets/img/LogoEspe.png"),
+                    image: AssetImage("assets/img/logo100ESpe.png"),
                     height: 175,
                     width: 100,
                   )),
@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                   onTap: () =>
                       FocusScope.of(context).unfocus(), //ocultar el teclado
                   child: Card(
-                    color: (const Color(0xFFCDBE78)),
+                    color: (const Color(0xFF388E3C)),
                     margin: const EdgeInsets.only(
                         left: 20, right: 20, top: 20, bottom: 50),
                     child: Padding(
@@ -99,12 +99,11 @@ class LoginPage extends StatelessWidget {
                   children: [
                     // ignore: deprecated_member_use
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.symmetric(horizontal: 100),
                       onPressed: () => sendLoginForm(context),
                       child: const Text(
                         'INICIAR SESION',
-                        style: TextStyle(fontSize: 15),
                       ),
                     ),
                     const Padding(
@@ -113,21 +112,19 @@ class LoginPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextButton(
-                            style: TextButton.styleFrom(
-                                primary: (const Color(0xFFCDBE78)),
-                                textStyle: const TextStyle(fontSize: 15),
-                                backgroundColor: const Color(0xFF383838)),
-                            onPressed: () =>
-                                router.pushNamed(Routes.RESET_PASS),
-                            child: const Text("Olvide mi contraseña")),
+                        CupertinoButton(
+                          color: (Color(0xFFEB1D36)),
+                          padding: const EdgeInsets.symmetric(horizontal: 30),
+                          onPressed: () => router.pushNamed(Routes.RESET_PASS),
+                          child: const Text('OLVIDE MI CONTRASEÑA'),
+                        ),
                         const SizedBox(
                           height: 20,
                           width: 10,
                         ),
                         // ignore: deprecated_member_use
                         CupertinoButton(
-                          color: (const Color(0xFFCDBE78)),
+                          color: (Colors.black),
                           padding: const EdgeInsets.symmetric(horizontal: 30),
                           onPressed: () => router.pushNamed(
                             Routes.REGISTER,
@@ -144,12 +141,12 @@ class LoginPage extends StatelessWidget {
                       height: 20,
                     ),
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.symmetric(horizontal: 30),
                       onPressed: () => router.pushNamedAndRemoveUntil(
-                        Routes.Home1,
+                        Routes.LOGINADMIN,
                       ),
-                      child: const Text('DOCENTE - ADMINISTRAR'),
+                      child: const Text('DOCENTE'),
                     ),
                   ],
                 ),

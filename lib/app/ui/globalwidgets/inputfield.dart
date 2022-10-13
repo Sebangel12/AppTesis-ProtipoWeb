@@ -56,13 +56,18 @@ class _InputFieldState extends State<InputField> {
                   }
                 },
                 decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)),
                     labelText: widget.label,
                     border: const OutlineInputBorder(),
                     suffixIcon: widget.ispass
                         ? CupertinoButton(
-                            child: Icon(_obscureText
-                                ? Icons.visibility
-                                : Icons.visibility_off),
+                            child: Icon(
+                              _obscureText
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.black,
+                            ),
                             onPressed: () {
                               _obscureText = !_obscureText;
                               setState(() {});
@@ -74,7 +79,7 @@ class _InputFieldState extends State<InputField> {
             if (state.hasError)
               Text(
                 state.errorText!,
-                style: const TextStyle(color: Colors.redAccent),
+                style: const TextStyle(color: Colors.black),
               )
           ],
         );

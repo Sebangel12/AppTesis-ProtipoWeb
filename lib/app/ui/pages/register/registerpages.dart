@@ -22,9 +22,9 @@ class RegistroUsers extends StatelessWidget {
       provider: registerprovider,
       builder: (_, controller) {
         return Scaffold(
-          backgroundColor: const Color(0xFF066163),
+          backgroundColor: const Color(0xFFFFFFFF),
           appBar: AppBar(
-            backgroundColor: const Color(0xFF383838),
+            backgroundColor: const Color(0xFF388E3C),
             centerTitle: true,
             title: const Text('Prototipo Aplicación Movil y Web'),
           ),
@@ -33,7 +33,7 @@ class RegistroUsers extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Card(
-                  color: (const Color(0xFFCDBE78)),
+                  color: (const Color(0xFF388E3C)),
                   margin: const EdgeInsets.only(
                       left: 20, right: 20, top: 50, bottom: 50),
                   child: Padding(
@@ -129,13 +129,12 @@ class RegistroUsers extends StatelessWidget {
                   children: [
                     // ignore: deprecated_member_use
                     CupertinoButton(
-                      color: (const Color(0xFFCDBE78)),
+                      color: (Colors.black),
                       padding: const EdgeInsets.symmetric(horizontal: 108),
                       //textColor: Colors.black,
                       onPressed: () => SendRegisForm(context),
                       child: const Text(
                         'Registrarme',
-                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                   ], //final GlobalKey<FormState> _formKey = GlobalKey();
