@@ -21,7 +21,7 @@ class _PDFViewState extends State<PDFView> {
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
         backgroundColor: const Color(0xFF388E3C),
-        title: const Text('Habra el documento PDF'),
+        title: const Text('Descargar el documento, haga click en el botón'),
         centerTitle: true,
       ),
       body: Center(
