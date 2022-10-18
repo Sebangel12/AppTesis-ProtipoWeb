@@ -5,24 +5,6 @@ import 'package:flutter_meedu/ui.dart';
 
 import '../../../../../domain/repositories/authrepos.dart';
 import '../../../../routes/routes.dart';
-import 'Parcial1/S1PM1P.dart';
-import 'Parcial1/S2PM1P.dart';
-import 'Parcial1/S3PM1P.dart';
-import 'Parcial1/S4PM1P .dart';
-import 'Parcial1/S5PM1P.dart';
-import 'Parcial1/S6PM1P.dart';
-import 'Parcial2/S1PM2P.dart';
-import 'Parcial2/S2PM2P.dart';
-import 'Parcial2/S3PM2P.dart';
-import 'Parcial2/S4PM2P .dart';
-import 'Parcial2/S5PM2P.dart';
-import 'Parcial2/S6PM2P.dart';
-import 'Parcial3/S1PM3P.dart';
-import 'Parcial3/S2PM3P.dart';
-import 'Parcial3/S3PM3P.dart';
-import 'Parcial3/S4PM3P.dart';
-import 'Parcial3/S5PM3P.dart';
-import 'Parcial3/S6PM3P.dart';
 
 class MenParPM extends StatefulWidget {
   @override

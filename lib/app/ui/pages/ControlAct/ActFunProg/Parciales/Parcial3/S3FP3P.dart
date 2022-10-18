@@ -124,7 +124,7 @@ class _S3FP3PState extends State<S3FP3P> {
                       });
                     }
                   },
-                  child: const Text("Subir archivo desde el aplicativo web"),
+                  child: const Text("Subir archivo"),
                 ),
                 const SizedBox(
                   height: 52,

@@ -123,7 +123,7 @@ class _S4PV2PState extends State<S4PV2P> {
                       });
                     }
                   },
-                  child: const Text("Subir archivo desde el aplicativo web"),
+                  child: const Text("Subir archivo"),
                 ),
                 const SizedBox(
                   height: 52,

@@ -124,7 +124,7 @@ class _S2FP1PState extends State<S2FP1P> {
                       });
                     }
                   },
-                  child: const Text("Subir archivo desde el aplicativo web"),
+                  child: const Text("Subir archivo"),
                 ),
                 const SizedBox(
                   height: 52,

@@ -5,24 +5,6 @@ import 'package:flutter_meedu/ui.dart';
 
 import '../../../../../domain/repositories/authrepos.dart';
 import '../../../../routes/routes.dart';
-import 'Parcial1/S1FP1P.dart';
-import 'Parcial1/S2FP1P.dart';
-import 'Parcial1/S3FP1P.dart';
-import 'Parcial1/S4FP1P.dart';
-import 'Parcial1/S5FP1P.dart';
-import 'Parcial1/S6FP1P.dart';
-import 'Parcial2/S1FP2P.dart';
-import 'Parcial2/S2FP2P.dart';
-import 'Parcial2/S3FP2P.dart';
-import 'Parcial2/S4FP2P.dart';
-import 'Parcial2/S5FP2P.dart';
-import 'Parcial2/S6FP2P.dart';
-import 'Parcial3/S1FP3P.dart';
-import 'Parcial3/S2FP3P.dart';
-import 'Parcial3/S3FP3P.dart';
-import 'Parcial3/S4FP3P.dart';
-import 'Parcial3/S5FP3P.dart';
-import 'Parcial3/S6FP3P.dart';
 
 class MenParFP extends StatefulWidget {
   @override
@@ -117,7 +99,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 1',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S1P1FP)),
           const SizedBox(
@@ -128,7 +109,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 2',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S2P1FP)),
           const SizedBox(
@@ -139,7 +119,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 3',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S3P1FP)),
           const SizedBox(
@@ -150,7 +129,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 4',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S4P1FP)),
           const SizedBox(
@@ -161,7 +139,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 5',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S5P1FP)),
           const SizedBox(
@@ -172,7 +149,6 @@ class _MenParFPState extends State<MenParFP> {
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: const Text(
                 'Semana 6',
-                style: TextStyle(color: Colors.black),
               ),
               onPressed: () => router.pushNamed(Routes.S6P1FP)),
           const SizedBox(height: 20),

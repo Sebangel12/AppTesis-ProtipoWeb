@@ -127,13 +127,10 @@ class _S3BD1PState extends State<S3BD1P> {
                       });
                     }
                   },
-                  child: const Text("Subir archivo desde el aplicativo web"),
+                  child: const Text("Subir archivo"),
                 ),
                 const SizedBox(
                   height: 52,
-                ),
-                const SizedBox(
-                  height: 20,
                 ),
                 Container(
                   margin: EdgeInsets.only(right: 20, left: 20),
