@@ -23,10 +23,10 @@ class _LoginAdminState extends State<LoginAdmin> {
     String mailcodFP = 'doc.fp@espe.edu.ec';
     String mailcodPV = 'doc.pv@espe.edu.ec';
     String mail = '';
-    String passBD = '7845';
-    String passAM = '1245';
-    String passPV = '8956';
-    String passFP = '5623';
+    String passBD = 'BD2482';
+    String passAM = 'APP1596';
+    String passPV = 'PV7395';
+    String passFP = 'FP0196';
     String pass = '';
 
     final _txtcontrol = TextEditingController();
